@@ -1,0 +1,39 @@
+// These are the requests used to test 
+// the API using VSCode's REST-Client plugin 
+
+// Just GET the home page
+GET http://localhost:3000/
+###
+
+// GET the users 
+GET http://localhost:3000/users
+###
+
+// POST to register a user 
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name" : "Charlie",
+    "password" : "123"
+}
+###
+
+// POST to register another user
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "name" : "David",
+    "password" : "12345"
+}
+###
+
+// login 
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "name" : "David",
+    "password" : "12345"
+}
