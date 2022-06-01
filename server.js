@@ -3,16 +3,14 @@ const app = express();
 const bcrypt = require('bcrypt');
 const { notify } = require('../session_auth/routes/mainRoutes');
 
-
-
 // Express built-in middleware. 
 // It parses incoming requests with JSON payloads and is based on body-parser.
 app.use(express.json());  
 
 // This is just a simple structure simulating a 'dummy' dababase.
 const db_users = [ 
-  //  { name : 'alice', password: '' }, 
-  //  { name : 'bob', password: '' } 
+  // ex:  { name : 'alice', password: '123' }, 
+  // ex:  { name : 'bob', password: '321' } 
 ]
 
 app.get('/', (req, res) => { 
